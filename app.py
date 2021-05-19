@@ -12,7 +12,8 @@ app = Flask(__name__)
 
 app.config['DEBUG'] = True
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'postgresql://localhost/tianhuizhou')
+db_url="postgresql://fxfmkbpgfhufdf:d4e802709ef3eed8e444db2295a95b02d588adda3d7c95818f3fa7b39e03f07c@ec2-23-23-128-222.compute-1.amazonaws.com:5432/daordfs6pevj4o"
+app.config['SQLALCHEMY_DATABASE_URI'] = db_url
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 app.secret_key = 'jose'
